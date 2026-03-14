@@ -1,6 +1,13 @@
 import Link from "next/link";
-import { COMPANY, NAV_LINKS } from "@/lib/constants";
-import { PhoneIcon, EmailIcon, LocationIcon } from "@/components/Icons";
+import { COMPANY, NAV_LINKS, SOCIAL_LINKS } from "@/lib/constants";
+import {
+  PhoneIcon,
+  EmailIcon,
+  LocationIcon,
+  FacebookIcon,
+  TikTokIcon,
+  TwitterIcon,
+} from "@/components/Icons";
 
 export default function Footer() {
   const quickLinks = NAV_LINKS.slice(0, 4); // Home, About, Services, Contact
@@ -13,10 +20,41 @@ export default function Footer() {
           <h2 className="text-yellow-400 text-xl font-bold mb-3">
             {COMPANY.name}
           </h2>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed mb-4">
             Reliable electrical and solar services for residential, commercial
             and industrial clients across South Africa.
           </p>
+
+          {/* Social Media Icons */}
+          <div className="flex items-center gap-4">
+            <a
+              href={SOCIAL_LINKS.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-800 hover:bg-yellow-400 text-gray-300 hover:text-black rounded-full flex items-center justify-center transition-colors"
+              aria-label="Follow ECALVIN ETRICIAN on Facebook"
+            >
+              <FacebookIcon className="w-5 h-5" />
+            </a>
+            <a
+              href={SOCIAL_LINKS.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-800 hover:bg-yellow-400 text-gray-300 hover:text-black rounded-full flex items-center justify-center transition-colors"
+              aria-label="Follow ECALVIN ETRICIAN on TikTok"
+            >
+              <TikTokIcon className="w-5 h-5" />
+            </a>
+            <a
+              href={SOCIAL_LINKS.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-800 hover:bg-yellow-400 text-gray-300 hover:text-black rounded-full flex items-center justify-center transition-colors"
+              aria-label="Follow ECALVIN ETRICIAN on X (Twitter)"
+            >
+              <TwitterIcon className="w-5 h-5" />
+            </a>
+          </div>
         </div>
 
         {/* Quick Links */}
@@ -70,7 +108,7 @@ export default function Footer() {
               <EmailIcon className="w-5 h-5 text-yellow-400" />
               <a
                 href={`mailto:${COMPANY.email}`}
-                className="hover:text-yellow-400 transition-colors"
+                className="hover:text-yellow-400 transition-colors break-all"
               >
                 {COMPANY.email}
               </a>

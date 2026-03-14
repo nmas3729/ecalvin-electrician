@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { COMPANY } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 
 interface ContactFormProps {
@@ -8,9 +10,39 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ className }: ContactFormProps) {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Form submission logic will be added here
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      fullName: formData.get("fullName") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      message: formData.get("message") as string,
+    };
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Quote Request from ${data.fullName}`);
+    const body = encodeURIComponent(
+      `Name: ${data.fullName}\nEmail: ${data.email}\nPhone: ${data.phone || "Not provided"}\n\nMessage:\n${data.message}`
+    );
+    
+    // Open email client with pre-filled data
+    window.location.href = `mailto:${COMPANY.email}?subject=${subject}&body=${body}`;
+    
+    setIsSubmitting(false);
+    setSubmitStatus("success");
+    
+    // Reset form after successful submission
+    e.currentTarget.reset();
+    
+    // Reset status after 5 seconds
+    setTimeout(() => setSubmitStatus("idle"), 5000);
   };
 
   return (
@@ -79,8 +111,19 @@ export default function ContactForm({ className }: ContactFormProps) {
           />
         </div>
 
-        <Button type="submit" variant="dark" className="w-full uppercase tracking-wide">
-          Submit Request
+        {submitStatus === "success" && (
+          <div className="bg-green-100 text-green-800 p-3 rounded-lg text-sm">
+            Your email client has been opened. Please send the email to complete your request.
+          </div>
+        )}
+
+        <Button 
+          type="submit" 
+          variant="dark" 
+          className="w-full uppercase tracking-wide"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Opening Email..." : "Submit Request"}
         </Button>
       </form>
     </div>

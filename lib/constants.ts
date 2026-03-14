@@ -6,7 +6,7 @@ export const COMPANY = {
     "Reliable Electrical Solutions for Homes, Businesses and Industrial Facilities Across South Africa.",
   phone: "+27 82 740 6634",
   phoneAlt: "067 127 8609",
-  email: "matsenene9403@gmail.com",
+  email: "matsenene@ecalvinetrician.co.za",
   whatsapp: "27827406634",
   address: {
     street: "46 Thomas Street",
@@ -22,6 +22,13 @@ export const COMPANY = {
   manager: {
     name: "Ms. Mulalo Rapfumbedzani",
   },
+} as const;
+
+// Social Media Links
+export const SOCIAL_LINKS = {
+  facebook: "https://www.facebook.com/ecalvinetrician",
+  tiktok: "https://www.tiktok.com/@ecalvinetrician",
+  twitter: "https://x.com/ecalvinetrician",
 } as const;
 
 // Navigation Links

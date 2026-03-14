@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsappButton from "@/components/WhatsappButton";
+import SocialButtons from "@/components/SocialButtons";
 import { COMPANY } from "@/lib/constants";
 import type { Metadata, Viewport } from "next";
 
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <SocialButtons />
         <WhatsappButton />
       </body>
     </html>
