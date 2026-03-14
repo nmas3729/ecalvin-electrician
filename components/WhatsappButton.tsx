@@ -1,16 +1,17 @@
+import { COMPANY } from "@/lib/constants";
+import { getWhatsAppLink } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/Icons";
+
 export default function WhatsappButton() {
   return (
     <a
-      href="https://wa.me/27827406634?text=Hello%20ECALVIN%20ETRICIAN%2C%20I%20would%20like%20a%20quote."
+      href={getWhatsAppLink(COMPANY.whatsapp)}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 bg-[#25D366] text-white px-5 py-3 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-105 transition flex items-center gap-3 font-semibold"
+      className="fixed bottom-6 right-6 bg-[#25D366] text-white px-5 py-3 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-105 transition flex items-center gap-3 font-semibold z-50"
+      aria-label="Chat with us on WhatsApp"
     >
-      <div className="w-6 h-6 flex items-center justify-center">
-        <svg fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-4.821 7.454c-1.679 0-3.325-.449-4.753-1.29l-.341-.202-3.536.928.944-3.447-.221-.352a9.611 9.611 0 0 1-1.474-5.111c0-5.32 4.329-9.65 9.655-9.65 2.577 0 5.001 1.005 6.824 2.828 1.823 1.823 2.828 4.246 2.828 6.822 0 5.321-4.329 9.65-9.65 9.65m0-21.016C6.733 0 1.398 5.336 1.398 12c0 2.128.554 4.205 1.604 6.04L0 24l6.163-1.617C7.961 23.447 9.945 24 12 24c6.627 0 12-5.373 12-12 0-3.203-1.247-6.216-3.515-8.485C18.218 1.248 15.204 0 12 0z" />
-        </svg>
-      </div>
+      <WhatsAppIcon className="w-6 h-6" />
       Chat with Us
     </a>
   );

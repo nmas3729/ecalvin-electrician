@@ -1,0 +1,41 @@
+# Image Directory Structure for ECALVIN ETRICIAN
+
+This folder contains all images for the website.
+
+## Folder Structure:
+
+### /hero/
+- residential-rooftop-solar3.png - Main hero background image
+
+### /services/
+- deye-hybrid-inverter.png - Solar Installations service
+- deye-solar-power-system.png - Solar Power Systems service
+- electrical-distribution-board.png - DB Board Installations service
+- residential-photovoltaic-solar-panel.png - PV Panel Installation service
+- residential-rooftop-solar-pv.png - Residential Solar service
+- sunsynk-8kw-hybrid-inverter.png - Hybrid Inverters service
+
+### /gallery/
+- deye-solar-power2.png
+- residential-electrical-distribution-board.png
+- residential-rooftop-solar.png
+- rooftop-solar-pv2.png
+- sunsynk-hybrid-inverter2.png
+
+### /team/
+- director-nethononda-mphaya.png - Managing Director photo
+- workers1.png - Team on site photo
+- workers2.png - Safety team photo
+
+### /about/
+- rooftop-residential-solar1.png - About section image
+
+### /certifications/
+- sunsynk-hybrid-inverters.png - Product certification
+- cipc-logo.png - CIPC logo
+- coida-logo.png - COIDA logo
+- eca-logo.png - ECA logo
+
+### /logos/
+- logo.png - Main company logo
+- logo-white.png - White variant for dark backgrounds
