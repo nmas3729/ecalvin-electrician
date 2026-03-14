@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { COMPANY } from "@/lib/constants";
+import { COMPANY, ABOUT_IMAGES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 
 interface AboutSectionProps {
@@ -47,7 +47,7 @@ export default function AboutSection({
             <div className="md:w-1/2">
               <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden bg-gray-100">
                 <Image
-                  src="/images/about/rooftop-residential-solar1.png"
+                  src={ABOUT_IMAGES.inline}
                   alt={`${COMPANY.name} rooftop solar installation example`}
                   fill
                   className="object-cover"

@@ -16,41 +16,51 @@ export default function CertificationBadge({
   return (
     <section
       className={cn(
-        "flex flex-col items-center gap-10",
-        reverse ? "md:flex-row-reverse" : "md:flex-row",
+        "flex flex-col items-center gap-8 lg:gap-12",
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row",
         className
       )}
     >
+      {/* Content */}
       <div
-        className={cn("md:w-2/3 space-y-4", reverse && "text-left md:text-right")}
+        className={cn(
+          "lg:w-2/3 space-y-4",
+          reverse ? "text-center lg:text-right" : "text-center lg:text-left"
+        )}
       >
-        <h2 className="text-3xl font-bold uppercase tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
           {certification.title}{" "}
-          <span className="text-yellow-400">({certification.badge})</span>
+          <span className="text-primary">({certification.badge})</span>
         </h2>
-        <p className="text-lg leading-relaxed text-gray-300">
+        <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
           {certification.description}
         </p>
       </div>
-      <div className="md:w-1/3 bg-white p-6 rounded-2xl flex justify-center shadow-lg border-4 border-gray-200 h-48 w-full items-center">
-        {certification.logo ? (
-          <Image
-            src={certification.logo}
-            alt={`${certification.title} logo`}
-            width={200}
-            height={200}
-            className="object-contain"
-          />
-        ) : (
-          <div className="text-center">
-            <div className="text-gray-600 font-bold text-4xl">
-              {certification.badge}
+
+      {/* Badge/Logo Container - Scaled correctly */}
+      <div className="lg:w-1/3 w-full max-w-xs">
+        <div className="bg-card p-6 rounded-2xl shadow-lg border-2 border-border aspect-square flex items-center justify-center">
+          {certification.logo ? (
+            <div className="relative w-full h-full">
+              <Image
+                src={certification.logo}
+                alt={`${certification.title} logo`}
+                fill
+                className="object-contain p-4"
+                sizes="(max-width: 768px) 200px, 250px"
+              />
             </div>
-            <p className="text-xs text-gray-500 mt-2">
-              [{certification.badge} Logo]
-            </p>
-          </div>
-        )}
+          ) : (
+            <div className="text-center">
+              <div className="text-muted-foreground font-bold text-4xl md:text-5xl">
+                {certification.badge}
+              </div>
+              <p className="text-xs text-muted-foreground/70 mt-3">
+                Certified
+              </p>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

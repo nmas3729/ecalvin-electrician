@@ -173,6 +173,38 @@ export const GALLERY_VIDEOS = [
   },
 ] as const;
 
+// Services Page Video
+export const SERVICES_VIDEO = {
+  src: "/videos/projects/full-system-walkthrough.mp4",
+  title: "Complete solar system installation walkthrough",
+} as const;
+
+// Hero Images
+export const HERO_IMAGES = {
+  home: "/images/hero/residential-rooftop-solar3.png",
+} as const;
+
+// About Page Images
+export const ABOUT_IMAGES = {
+  inline: "/images/about/rooftop-residential-solar1.png",
+} as const;
+
+// Team Images
+export const TEAM_IMAGES = {
+  director: "/images/team/director-nethononda-mphaya.png",
+  workers: "/images/team/workers1.png",
+} as const;
+
+// Safety Page Images
+export const SAFETY_IMAGES = {
+  workers: "/images/safety/workers2.png",
+} as const;
+
+// Certification Images
+export const CERTIFICATION_IMAGES = {
+  sunsynk: "/images/certifications/sunsynk-hybrid-inverters.png",
+} as const;
+
 // Certifications
 export const CERTIFICATIONS = [
   {

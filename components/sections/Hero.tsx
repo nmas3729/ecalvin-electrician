@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { COMPANY } from "@/lib/constants";
+import { COMPANY, HERO_IMAGES } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 import { getWhatsAppLink } from "@/lib/utils";
 import { WhatsAppIcon } from "@/components/Icons";
@@ -19,7 +19,7 @@ export default function Hero({
   title = COMPANY.name,
   tagline = COMPANY.tagline,
   description = COMPANY.description,
-  backgroundImage = "/images/hero/residential-rooftop-solar3.png",
+  backgroundImage = HERO_IMAGES.home,
   showCTA = true,
   showBenefits = true,
   className,

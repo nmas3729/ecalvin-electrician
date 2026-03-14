@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { COMPANY } from "@/lib/constants";
+import { COMPANY, TEAM_IMAGES } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import TeamCard from "@/components/ui/TeamCard";
@@ -14,7 +14,7 @@ export default function TeamSection({ className }: TeamSectionProps) {
     {
       name: COMPANY.director.name,
       title: COMPANY.director.title,
-      image: "/images/team/director-nethononda-mphaya.png",
+      image: TEAM_IMAGES.director,
     },
   ];
 
@@ -35,7 +35,7 @@ export default function TeamSection({ className }: TeamSectionProps) {
           {/* Team Photo */}
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200 sm:col-span-2">
             <Image
-              src="/images/team/workers1.png"
+              src={TEAM_IMAGES.workers}
               alt={`${COMPANY.name} technicians on site`}
               fill
               className="object-cover"
