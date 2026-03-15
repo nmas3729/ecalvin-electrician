@@ -48,7 +48,7 @@ export default function Hero({
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl font-bold text-yellow-400 text-balance">
+        <h1 className="text-3xl md:text-5xl font-bold text-yellow-400 text-balance">
           {title}
         </h1>
 

@@ -5,7 +5,7 @@ export const COMPANY = {
   description:
     "Reliable Electrical Solutions for Homes, Businesses and Industrial Facilities Across South Africa.",
   phone: "+27 82 740 6634",
-  phoneAlt: "067 127 8609",
+  phoneAlt: "+27 67 127 8609",
   email: "matsenene@ecalvinetrician.co.za",
   whatsapp: "27827406634",
   address: {
@@ -46,7 +46,8 @@ export const SERVICES = [
   {
     id: 1,
     title: "Electrical Maintenance",
-    description: "Routine inspections and maintenance to keep electrical systems safe and reliable.",
+    description:
+      "Routine inspections and maintenance to keep electrical systems safe and reliable.",
     image: "/images/services/electrical-maintenance.png",
   },
   {
@@ -208,6 +209,9 @@ export const SAFETY_IMAGES = {
 
 // Certification Images
 export const CERTIFICATION_IMAGES = {
+  cipc: "/images/certifications/cipc.png",
+  coida: "/images/certifications/coida.png",
+  eca: "/images/certifications/eca.png",
   sunsynk: "/images/certifications/sunsynk-hybrid-inverters.png",
 } as const;
 

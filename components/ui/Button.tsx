@@ -3,24 +3,22 @@ import { cn } from "@/lib/utils";
 
 type ButtonVariant = "primary" | "secondary" | "dark" | "outline";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   variant?: ButtonVariant;
   href?: string;
   external?: boolean;
   className?: string;
-  onClick?: () => void;
-  type?: "button" | "submit";
 }
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-yellow-400",
+    "bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed",
   secondary:
-    "bg-white text-black hover:bg-gray-100 border-2 border-white",
-  dark: "bg-black text-white hover:bg-gray-800 border-2 border-black",
+    "bg-white text-black hover:bg-gray-100 border-2 border-white disabled:opacity-50 disabled:cursor-not-allowed",
+  dark: "bg-black text-white hover:bg-gray-800 border-2 border-black disabled:opacity-50 disabled:cursor-not-allowed",
   outline:
-    "bg-transparent text-white hover:bg-white hover:text-black border-2 border-white",
+    "bg-transparent text-white hover:bg-white hover:text-black border-2 border-white disabled:opacity-50 disabled:cursor-not-allowed",
 };
 
 export default function Button({
@@ -29,8 +27,8 @@ export default function Button({
   href,
   external = false,
   className,
-  onClick,
   type = "button",
+  ...props
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center gap-2 px-6 py-3 rounded font-bold transition-colors";
@@ -59,7 +57,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={combinedStyles}>
+    <button type={type} className={combinedStyles} {...props}>
       {children}
     </button>
   );

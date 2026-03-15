@@ -58,7 +58,7 @@ export default function Services() {
         {/* SOLAR INVERTER REPAIR */}
         <section className="bg-muted p-8 md:p-10 rounded-xl shadow-lg border-l-8 border-primary relative overflow-hidden">
           <div className="absolute top-0 right-0 mt-2 mr-2">
-            <span className="bg-foreground text-background px-3 py-1 rounded text-sm font-bold">
+            <span className="hidden md:inline bg-foreground text-background px-3 py-1 rounded text-sm font-bold">
               100% Trusted
             </span>
           </div>

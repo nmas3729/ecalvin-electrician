@@ -40,8 +40,8 @@ export default function CertificationBadge({
       {/* Badge/Logo Container - Scaled correctly */}
       <div className="lg:w-1/3 w-full max-w-xs">
         <div className="bg-card p-6 rounded-2xl shadow-lg border-2 border-border aspect-square flex items-center justify-center">
-          {certification.logo ? (
-            <div className="relative w-full h-full">
+          {certification.logo && (
+            <div className="relative w-full aspect-square">
               <Image
                 src={certification.logo}
                 alt={`${certification.title} logo`}
@@ -50,7 +50,8 @@ export default function CertificationBadge({
                 sizes="(max-width: 768px) 200px, 250px"
               />
             </div>
-          ) : (
+          )}
+          {!certification.logo && (
             <div className="text-center">
               <div className="text-muted-foreground font-bold text-4xl md:text-5xl">
                 {certification.badge}

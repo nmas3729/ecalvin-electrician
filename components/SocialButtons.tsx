@@ -5,7 +5,7 @@ import { FacebookIcon, TikTokIcon, TwitterIcon } from "@/components/Icons";
 
 export default function SocialButtons() {
   return (
-    <div className="fixed bottom-24 right-6 flex flex-col gap-3 z-40">
+    <div className="fixed bottom-24 right-6 hidden md:flex flex-col gap-3 z-40">
       <a
         href={SOCIAL_LINKS.facebook}
         target="_blank"

@@ -5,10 +5,10 @@ import CertificationBadge from "@/components/ui/CertificationBadge";
 import CTASection from "@/components/sections/CTASection";
 
 export default function CertificationsPage() {
-  // Extended certifications with logos
+  // Type-safe mapping: only attach logos that exist in CERTIFICATION_IMAGES
   const certificationsWithLogos = CERTIFICATIONS.map((cert) => ({
     ...cert,
-    logo: cert.id === "sunsynk" ? CERTIFICATION_IMAGES.sunsynk : undefined,
+    logo: CERTIFICATION_IMAGES[cert.id as keyof typeof CERTIFICATION_IMAGES] ?? null,
   }));
 
   return (
@@ -24,6 +24,7 @@ export default function CertificationsPage() {
       </section>
 
       <Container className="pb-20 space-y-16">
+        {/* Render each certification */}
         {certificationsWithLogos.map((certification, index) => (
           <CertificationBadge
             key={certification.id}
@@ -50,7 +51,7 @@ export default function CertificationsPage() {
             <div className="bg-card p-4 rounded-2xl shadow-lg border-2 border-border aspect-square flex items-center justify-center">
               <div className="relative w-full h-full">
                 <Image
-                  src={CERTIFICATION_IMAGES.sunsynk}
+                  src={CERTIFICATION_IMAGES.sunsynk as string} // cast ensures TS knows it exists
                   alt="Sunsynk certified hybrid inverter products"
                   fill
                   className="object-contain p-2"
