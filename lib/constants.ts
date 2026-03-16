@@ -5,7 +5,7 @@ export const COMPANY = {
   description:
     "Reliable Electrical Solutions for Homes, Businesses and Industrial Facilities Across South Africa.",
   phone: "+27 82 740 6634",
-  phoneAlt: "+27 67 127 8609",
+  phoneAlt: "+27 79 833 8349",
   email: "matsenene@ecalvinetrician.co.za",
   whatsapp: "27827406634",
   address: {
@@ -20,7 +20,7 @@ export const COMPANY = {
     title: "Managing Director",
   },
   manager: {
-    name: "Ms. Mulalo Rapfumbedzani",
+    name: "Carole Lindo Mtizi",
   },
 } as const;
 
