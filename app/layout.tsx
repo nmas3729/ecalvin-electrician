@@ -24,12 +24,18 @@ export const metadata: Metadata = {
     "COC certificate",
     "ECALVIN ETRICIAN",
   ],
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {
   themeColor: "#000000",
   width: "device-width",
-  initialScale: 1,
+  initialScale: 1.0,
+  maximumScale: 5.0,
+  userScalable: true,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

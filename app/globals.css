@@ -40,3 +40,54 @@ html {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
+
+/* ========== MOBILE FIX - NO DESIGN CHANGES ========== */
+@media only screen and (max-width: 768px) {
+  /* Fix horizontal scroll */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  
+  /* All containers fit screen */
+  main, section, div, header, footer {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Images scale down */
+  img, video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Touch-friendly buttons */
+  button, a, .button, [role="button"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Add breathing room */
+  body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  section, .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Also works for tablets */
+@media only screen and (max-width: 1024px) {
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
