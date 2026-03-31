@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "solar installation",
     "South Africa",
     "COC certificate",
-    "ECALVIN ETRICIAN",
+    "ECALVIN ELECTRICIAN",
   ],
   formatDetection: {
     telephone: false,

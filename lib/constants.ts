@@ -1,6 +1,6 @@
 // Company Information - Single source of truth
 export const COMPANY = {
-  name: "ECALVIN ETRICIAN",
+  name: "ECALVIN ELECTRICIAN",
   tagline: "Professional Electrical & Solar Services",
   description:
     "Reliable Electrical Solutions for Homes, Businesses and Industrial Facilities Across South Africa.",
@@ -148,7 +148,7 @@ export const CORE_VALUES = [
 export const GALLERY_IMAGES = [
   {
     src: "/images/gallery/deye-solar-power2.png",
-    alt: "Deye solar power system installation by ECALVIN ETRICIAN",
+    alt: "Deye solar power system installation by ECALVIN ELECTRICIAN",
   },
   {
     src: "/images/gallery/residential-electrical-distribution-board.png",
@@ -222,7 +222,7 @@ export const CERTIFICATIONS = [
     title: "Company Registration",
     badge: "CIPC",
     description:
-      "ECALVIN ETRICIAN is a South African-based company committed to delivering high-quality building solutions across residential, commercial, and industrial sectors.",
+      "ECALVIN ELECTRICIAN is a South African-based company committed to delivering high-quality building solutions across residential, commercial, and industrial sectors.",
   },
   {
     id: "coida",

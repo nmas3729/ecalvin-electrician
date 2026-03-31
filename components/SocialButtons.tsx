@@ -11,7 +11,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-        aria-label="Follow ECALVIN ETRICIAN on Facebook"
+        aria-label="Follow ECALVIN ELECTRICIAN on Facebook"
       >
         <FacebookIcon className="w-6 h-6" />
       </a>
@@ -20,7 +20,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-        aria-label="Follow ECALVIN ETRICIAN on TikTok"
+        aria-label="Follow ECALVIN ELECTRICIAN on TikTok"
       >
         <TikTokIcon className="w-6 h-6" />
       </a>
@@ -29,7 +29,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-        aria-label="Follow ECALVIN ETRICIAN on X (Twitter)"
+        aria-label="Follow ECALVIN ELECTRICIAN on X (Twitter)"
       >
         <TwitterIcon className="w-6 h-6" />
       </a>

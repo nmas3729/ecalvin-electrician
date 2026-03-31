@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Company Info */}
         <div>
           <h2 className="text-yellow-400 text-xl font-bold mb-3">
-            ECALVIN ETRICIAN
+            ECALVIN ELECTRICIAN
           </h2>
 
           <p>
@@ -56,7 +56,7 @@ export default function Footer() {
 
       <div className="text-center border-t border-gray-700 py-4 flex flex-col gap-1 text-sm">
         <p>
-          © {new Date().getFullYear()} ECALVIN ETRICIAN. All rights reserved.
+          © {new Date().getFullYear()} ECALVIN ELECTRICIAN. All rights reserved.
         </p>
         <p className="text-gray-400">
           Powered by NMAS WebCraft

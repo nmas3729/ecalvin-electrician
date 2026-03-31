@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex justify-between items-center">
 
         <h1 className="text-yellow-400 font-bold text-xl">
-          ECALVIN ETRICIAN
+          ECALVIN ELECTRICIAN
         </h1>
 
         <div className="space-x-6">

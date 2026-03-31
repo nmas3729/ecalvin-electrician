@@ -32,7 +32,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-gray-800 hover:bg-yellow-400 text-gray-300 hover:text-black rounded-full flex items-center justify-center transition-colors"
-              aria-label="Follow ECALVIN ETRICIAN on Facebook"
+              aria-label="Follow ECALVIN ELECTRICIAN on Facebook"
             >
               <FacebookIcon className="w-5 h-5" />
             </a>
@@ -41,7 +41,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-gray-800 hover:bg-yellow-400 text-gray-300 hover:text-black rounded-full flex items-center justify-center transition-colors"
-              aria-label="Follow ECALVIN ETRICIAN on TikTok"
+              aria-label="Follow ECALVIN ELECTRICIAN on TikTok"
             >
               <TikTokIcon className="w-5 h-5" />
             </a>
@@ -50,7 +50,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-gray-800 hover:bg-yellow-400 text-gray-300 hover:text-black rounded-full flex items-center justify-center transition-colors"
-              aria-label="Follow ECALVIN ETRICIAN on X (Twitter)"
+              aria-label="Follow ECALVIN ELECTRICIAN on X (Twitter)"
             >
               <TwitterIcon className="w-5 h-5" />
             </a>

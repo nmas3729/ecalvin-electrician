@@ -20,7 +20,7 @@ export function formatPhone(phone: string): string {
  */
 export function getWhatsAppLink(
   phone: string,
-  message: string = "Hello ECALVIN ETRICIAN, I would like a quote."
+  message: string = "Hello ECALVIN ELECTRICIAN, I would like a quote."
 ): string {
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${phone}?text=${encodedMessage}`;
