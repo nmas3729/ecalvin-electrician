@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsappButton from "@/components/WhatsappButton";
@@ -45,6 +46,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-M0PM1Z0WX7"
+        strategy="afterInteractive"
+      />
+      <Script id="gtag" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-M0PM1Z0WX7');`}
+      </Script>
       <body className={`${inter.className} bg-white text-black`}>
         <Navbar />
         <main>{children}</main>
